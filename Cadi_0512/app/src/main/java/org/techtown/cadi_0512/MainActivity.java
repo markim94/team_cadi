@@ -15,17 +15,16 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-        Button button = (Button) findViewById(R.id.button);
+        Button button = (Button) findViewById(R.id.button); // 버튼에 대한 객체 생성
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(),"안녕하세요", Toast.LENGTH_LONG).show();
-                Intent intent = new Intent(getApplicationContext(), SecondActivity.class);
-                startActivity(intent);
+                Toast.makeText(getApplicationContext(),"안녕하세요", Toast.LENGTH_LONG).show(); // 버튼 클릭시 토스트 메시지 출력
+                Intent intent = new Intent(getApplicationContext(), SecondActivity.class); // 액티비티 전환에 관한 인텐트 생성
+                startActivity(intent); // 인텐트 실행(액티비티 전환)
             }
         });
-
-
+        
 
     }
 }
