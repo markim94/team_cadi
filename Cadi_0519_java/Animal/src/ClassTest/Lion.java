@@ -5,5 +5,4 @@ public class Lion extends Animal{
 	void roar() {
 		System.out.println("roar() 호출됨.");
 	}
-
 }
