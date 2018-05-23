@@ -9,6 +9,7 @@ public class AnimalTest {
 		eagle.fly();
 		eagle.setWeight(20); // eagle의 weight를 20으로 설정
 		eagle.printWeight(); // weight 출력
+		eagle.weight = 10;
 		
 		Lion lion = new Lion();
 		lion.roar();
