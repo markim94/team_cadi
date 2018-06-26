@@ -8,8 +8,11 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.lang.reflect.GenericArrayType;
 import java.util.ArrayList;
@@ -18,20 +21,44 @@ public class MainActivity extends AppCompatActivity {
 
     private ListView mListView = null;
 
+    /*
+    액션바 설정
+     */
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.search_tab, menu);
         return true;
     }
-    
 
+
+    /*
+    액션바 클릭 설정
+     */
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int curId = item.getItemId(); // 탭 메뉴 아이템에서 id값을 얻어옴
+        switch (curId){
+            case R.id.action_search_btn:
+                Toast.makeText(getApplicationContext(),"검색버튼 클릭",Toast.LENGTH_LONG).show();
+            case R.id.action_settings:
+                Toast.makeText(getApplicationContext(),"설정버튼 클릭",Toast.LENGTH_LONG).show();
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
+        Button button = (Button) findViewById(R.id.addButton);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(), "추가버튼을 클릭함", Toast.LENGTH_LONG).show();
+            }
+        });
 
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tl_tabs);
         //viewpager
@@ -76,7 +103,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        //Tab의 타이틀 설정
+        //Tab의 타이틀 설정, 이미지로 변환가능
         @Override
         public CharSequence getPageTitle(int position) {
             switch (position) {
