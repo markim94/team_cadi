@@ -23,6 +23,8 @@ public class MainActivity extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.search_tab, menu);
         return true;
     }
+    
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
