@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
+
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tl_tabs);
         //viewpager
         ViewPager viewPager = (ViewPager) findViewById(R.id.vp_pager);
@@ -50,8 +51,6 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
-
     //pager adapter
     private class MyPagerAdapter extends FragmentPagerAdapter {
 
@@ -62,9 +61,6 @@ public class MainActivity extends AppCompatActivity {
             super(fm);
             this.arrFragments = arrFragments;
         }
-
-
-
 
         @Override
         public Fragment getItem(int position) {
