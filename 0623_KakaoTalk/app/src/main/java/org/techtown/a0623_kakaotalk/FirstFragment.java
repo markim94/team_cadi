@@ -30,7 +30,21 @@ public class FirstFragment extends ListFragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
+
+
+        adapter = new ListViewAdapter();
         setListAdapter(adapter);
+
+        adapter.addItem(ContextCompat.getDrawable(getActivity(), R.drawable.profile),"name","message");
+        adapter.addItem(ContextCompat.getDrawable(getActivity(), R.drawable.profile),"name","message");
+        adapter.addItem(ContextCompat.getDrawable(getActivity(), R.drawable.profile),"name","message");
+        adapter.addItem(ContextCompat.getDrawable(getActivity(), R.drawable.profile),"name","message");
+        adapter.addItem(ContextCompat.getDrawable(getActivity(), R.drawable.profile),"name","message");
+        adapter.addItem(ContextCompat.getDrawable(getActivity(), R.drawable.profile),"name","message");
+        adapter.addItem(ContextCompat.getDrawable(getActivity(), R.drawable.profile),"name","message");
+        adapter.addItem(ContextCompat.getDrawable(getActivity(), R.drawable.profile),"name","message");
+        adapter.addItem(ContextCompat.getDrawable(getActivity(), R.drawable.profile),"name","message");
+        adapter.addItem(ContextCompat.getDrawable(getActivity(), R.drawable.profile),"name","message");
 
 
         return super.onCreateView(inflater, container, savedInstanceState);

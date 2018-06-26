@@ -17,8 +17,7 @@
             app:scale_left="50"
             app:scale_top="50"
             app:scale_width="100"
-            app:scale_height="100"
-            android:background="#fd234564" />
+            app:scale_height="100"   />
 
 
         <TextView
