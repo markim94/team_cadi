@@ -7,6 +7,11 @@ import android.graphics.drawable.Drawable;
  */
 public class ListItem {
     private Drawable profile;
+
+    /* 이미지 배열 적용시 int형으로
+    private int profile2;
+    */
+
     private String friendName;
     private String stateMessage;
 
@@ -36,7 +41,9 @@ public class ListItem {
     }
 
 
-
-
-
+    /* 이미지 배열 적용 메서드
+    public void setProfile(int i) {
+        profile2 = i;
+    }
+    */
 }
