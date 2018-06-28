@@ -52,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //추가 버튼 리스너 설정
         Button button = (Button) findViewById(R.id.addButton);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -60,11 +61,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //tablayout
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tl_tabs);
         //viewpager
         ViewPager viewPager = (ViewPager) findViewById(R.id.vp_pager);
 
-        //프래그먼트 배열 - 만들어 놓은 프래그먼트를 차례대로 넣음.
+        //프래그먼트 배열, 프래그먼트를 배열에
         Fragment[] arrFragments = new Fragment[5];
         arrFragments[0] = new FirstFragment();
         arrFragments[1] = new SecondFragment();
@@ -72,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
         arrFragments[3] = new FourthFragment();
         arrFragments[4] = new FifthFragment();
 
-        //어답터 생성후 연결 - 배열을 인자로 추가.
+        //어댑터 연결
         MyPagerAdapter adapter = new MyPagerAdapter(getSupportFragmentManager(), arrFragments);
         viewPager.setAdapter(adapter);
         tabLayout.setupWithViewPager(viewPager);
