@@ -64,6 +64,14 @@ public class ListViewAdapter extends BaseAdapter {
         return convertView;
     }
 
+    /**
+     * addItem이 아닌 배열을 커스텀리스트뷰에 적용하기(검색해볼 것)
+     
+    int[] profileArr = {R.drawable.profile, R.drawable.profile, R.drawable.profile, R.drawable.profile, R.drawable.profile, R.drawable.profile, R.drawable.profile, R.drawable.profile};
+    String[] nameArr = {"홍길동", "김길동", "김동길", "홍동길", "이길동", "이동길", "박동길", "박길동"};
+    String[] msgArr = {"msg1", "msg2", "msg3", "msg4", "메시지5", "메시지6", "메시지7", "메시지8"};
+     */
+
     public void addItem(Drawable profile, String name, String message) {
         ListItem item = new ListItem();
 
@@ -74,7 +82,7 @@ public class ListViewAdapter extends BaseAdapter {
         listItemList.add(item);
     }
 
-    
+
 
 
 
