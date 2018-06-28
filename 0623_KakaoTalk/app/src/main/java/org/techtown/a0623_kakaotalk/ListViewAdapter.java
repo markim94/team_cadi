@@ -65,7 +65,7 @@ public class ListViewAdapter extends BaseAdapter {
     }
 
 
-    /* 배열로 적용할 시 주석 풀 것.
+    /* 배열로 적용할 시 주석 풀 것. 이미지 배열은 int형 캐스팅 해주어야함.
     int[] profileArr = new int[]{R.drawable.profile, R.drawable.profile, R.drawable.profile, R.drawable.profile, R.drawable.profile, R.drawable.profile, R.drawable.profile, R.drawable.profile};
     String[] nameArr = {"홍길동", "김길동", "김동길", "홍동길", "이길동", "이동길", "박동길", "박길동"};
     String[] msgArr = {"msg1", "msg2", "msg3", "msg4", "메시지5", "메시지6", "메시지7", "메시지8"};
