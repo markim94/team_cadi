@@ -34,7 +34,9 @@ public class MainActivity extends AppCompatActivity {
     private class listViewAdapter extends BaseAdapter{
 
         private Context mContext = null;
-        //private Arraylist<ListData> mlistData = new ArrayList<ListData>();
+        private ArrayList<ListData> mlistData = new ArrayList<ListData>();
+
+        Class.ViewHolder viewHolder;
 
 
 
@@ -55,6 +57,8 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
+
+            new Class.ViewHolder = new Class.
             return null;
         }
     }
