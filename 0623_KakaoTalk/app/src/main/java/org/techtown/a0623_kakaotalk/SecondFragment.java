@@ -8,8 +8,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-
-
+/**
+ * 2번째 탭에 이용될 프래그먼트
+ */
 public class SecondFragment extends Fragment {
 
     public SecondFragment() {

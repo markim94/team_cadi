@@ -14,6 +14,9 @@ import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 
+/**
+ * 리스트뷰 adapter 별개의 클래스로 분리
+ */
 public class ListViewAdapter extends BaseAdapter {
 
     private ArrayList<ListItem> listItemList = new ArrayList<ListItem>();

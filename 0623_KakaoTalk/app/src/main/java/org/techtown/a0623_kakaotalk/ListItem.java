@@ -3,7 +3,7 @@ package org.techtown.a0623_kakaotalk;
 import android.graphics.drawable.Drawable;
 
 /**
- * 리스트 각각의 정보
+ * 리스트 뷰 홀더
  */
 public class ListItem {
     private Drawable profile;

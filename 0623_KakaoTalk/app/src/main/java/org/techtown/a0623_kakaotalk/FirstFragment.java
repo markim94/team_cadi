@@ -19,9 +19,12 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
 
-
+/**
+ * 1번째 탭에 이용될 프래그먼트
+ */
 public class FirstFragment extends ListFragment {
 
+    //어댑터
     ListViewAdapter adapter;
 
     public FirstFragment() {

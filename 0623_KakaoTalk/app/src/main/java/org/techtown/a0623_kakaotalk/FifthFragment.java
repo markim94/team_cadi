@@ -15,7 +15,9 @@ import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 
-
+/**
+ * 5번째 탭에 이용될 프래그먼트
+ */
 public class FifthFragment extends Fragment {
 
     public FifthFragment() {

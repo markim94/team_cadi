@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     /*
-    액션바 클릭 설정
+    액션바 클릭 리스너 설정
      */
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
