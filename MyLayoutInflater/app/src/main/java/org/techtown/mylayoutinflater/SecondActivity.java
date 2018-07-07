@@ -28,6 +28,7 @@ public class SecondActivity extends AppCompatActivity {
 
                 CheckBox checkBox = (CheckBox) container.findViewById(R.id.checkBox);
                 checkBox.setText("로딩되었어요.");
+
             }
         });
     }
