@@ -1,7 +1,9 @@
-package org.techtown.listview;
+package Activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import org.techtown.listview.R;
 
 public class SecondActivity extends AppCompatActivity {
 

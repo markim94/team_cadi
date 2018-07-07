@@ -1,9 +1,9 @@
-package org.techtown.listview;
+package Class;
 
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class ViewHolder {
+public class ListData {
 
     public ImageView profile;
     public TextView friendName;

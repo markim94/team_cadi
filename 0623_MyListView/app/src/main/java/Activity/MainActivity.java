@@ -1,20 +1,16 @@
-package org.techtown.listview;
+package Activity;
 
-import android.Manifest;
 import android.content.Context;
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
 import android.widget.ListView;
-import android.widget.Toast;
 
-import java.lang.reflect.Array;
+import org.techtown.listview.R;
+
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
@@ -34,10 +30,15 @@ public class MainActivity extends AppCompatActivity {
     private class listViewAdapter extends BaseAdapter{
 
         private Context mContext = null;
-        private ArrayList<ListData> mlistData = new ArrayList<ListData>();
+        private ArrayList<Class.ListData> mlistData = new ArrayList<Class.ListData>();
 
         Class.ViewHolder viewHolder;
 
+
+        public listViewAdapter(Context context){
+            super();
+            this.mContext = context;
+        }
 
 
         @Override
@@ -58,7 +59,8 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
 
-            new Class.ViewHolder = new Class.
+            viewHolder = new Class.ViewHolder();
+            LayoutInflater layoutInflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             return null;
         }
     }
