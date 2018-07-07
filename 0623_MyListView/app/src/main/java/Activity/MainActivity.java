@@ -7,7 +7,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import org.techtown.listview.R;
 
@@ -59,9 +61,33 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
 
-            viewHolder = new Class.ViewHolder();
-            LayoutInflater layoutInflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            return null;
+
+            if(convertView==null){
+                viewHolder = new Class.ViewHolder();
+
+                LayoutInflater layoutInflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+                convertView = layoutInflater.inflate(R.layout.list_item, null);
+
+                /*
+                 *ViewHolder
+                 public ImageView profile;
+                 public TextView friendName;
+                 public TextView stateMessage;
+                 */
+
+                viewHolder.profile = (ImageView)convertView.findViewById(R.id.profile);
+                viewHolder.friendName = (TextView)convertView.findViewById(R.id.friendName);
+                viewHolder.stateMessage = (TextView)convertView.findViewById(R.id.stateMessage);
+
+                convertView.setTag(viewHolder);
+            }
+
+            else{
+
+                convertView.getTag();
+
+            }
+            return convertView;
         }
     }
 
