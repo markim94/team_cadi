@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/popupLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f000000">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="레이아웃이 적용된 팝업창"
+        android:textSize="24dp"
+        android:textColor="#ff0"
+        android:gravity="center"
+        android:background="#f000"
+        android:layout_margin="10dp"/>
+
+
+    <Button
+        android:id="@+id/btnPopupClose"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Close"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_margin="10dp"/>
+
+</android.support.constraint.ConstraintLayout>
