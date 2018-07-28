@@ -12,12 +12,18 @@ import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.PopupWindow;
+import android.widget.Toast;
 
 
 public class MainActivity extends AppCompatActivity {
 
+    // 팝업창을 닫는 버튼
     private Button btnPopupClose;
+
+    // 팝업창을 띄우는 버튼
     private Button btnPopupLoad;
+
+    // 팝업 윈도우
     private PopupWindow popupWindow;
 
     private int mWidthPixel = 0;
@@ -28,7 +34,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        WindowManager wm = getWindowManager(); // 윈도우 매니저 객체로 생성
+        // 윈도우 매니저, displayMetrics : 가로와 세로길이를 지정하기 위해
+        WindowManager wm = getWindowManager(); // 윈도우 매니저 객체
         Display dp = wm.getDefaultDisplay();
         DisplayMetrics dm = new DisplayMetrics();
         dp.getMetrics(dm);
@@ -40,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
         btnPopupLoad.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Toast.makeText(getApplicationContext(),"popupLIstener실행",Toast.LENGTH_SHORT).show();
 
             }
         });
@@ -56,6 +64,7 @@ public class MainActivity extends AppCompatActivity {
             popupWindow.showAtLocation(layout, Gravity.CENTER, 0,0);
         }
         catch (Exception e){
+
             e.printStackTrace();
         }
 

@@ -8,7 +8,6 @@
     android:background="#f00">
 
     <TextView
-        android:id="@+id/txtPopup"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="레이아웃이 적용된 팝업창"
