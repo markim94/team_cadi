@@ -6,7 +6,7 @@
 
     <Button
         android:id="@+id/btnPopupLoad"
-        android:text="BUTTON"
+        android:text="팝업윈도우 출력"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
