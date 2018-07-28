@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
         btnPopupLoad.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(),"popupLIstener실행",Toast.LENGTH_SHORT).show();
+                initiatePopupWindow();
 
             }
         });
@@ -56,19 +56,38 @@ public class MainActivity extends AppCompatActivity {
 
     private void initiatePopupWindow(){
         try{
+
+            // Mainactivity.this 권장
             LayoutInflater inflater = (LayoutInflater) MainActivity.this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
+            // 뷰그룹으로 형변환
             View layout = inflater.inflate(R.layout.popuplayout, (ViewGroup) findViewById(R.id.popupLayout));
 
-            popupWindow = new PopupWindow(layout, mWidthPixel-100, mHeightPixel-500);
+            // focusable은 팝업윈도우를 실행시켰을 때 윈도우상의 아이템에 초점을 둘지 말지..
+            popupWindow = new PopupWindow(layout, mWidthPixel-100, mHeightPixel-500, true);
+
+            // 팝업윈도우 위치, 숫자값을 임의로 준다면 center에서 숫자값만큼 이동
             popupWindow.showAtLocation(layout, Gravity.CENTER, 0,0);
+
+            // 팝업윈도우에 위치한 버튼을 사용할땐 layout.
+            btnPopupClose = (Button) layout.findViewById(R.id.btnPopupClose);
+            btnPopupClose.setOnClickListener(disListener);
+
         }
         catch (Exception e){
-
             e.printStackTrace();
         }
 
     }
+
+
+    private View.OnClickListener disListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            popupWindow.dismiss();
+        }
+    };
+
 
 
 
