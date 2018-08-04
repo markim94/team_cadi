@@ -79,17 +79,12 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
-
-
     private View.OnClickListener disListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
             popupWindow.dismiss();
         }
     };
-
-
-
 
 }
 
