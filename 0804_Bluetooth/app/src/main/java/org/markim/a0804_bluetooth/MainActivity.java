@@ -15,6 +15,12 @@ import com.gun0912.tedpermission.TedPermission;
 
 import java.util.ArrayList;
 
+/**
+ * 동작방법, 원리 : 
+ * permissionListener 동작 이후 checkMyPermission()
+ */
+
+
 public class MainActivity extends AppCompatActivity {
 
     // bluetooth adapter
@@ -32,7 +38,6 @@ public class MainActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                checkMyPermission();
             }
         });
     }
