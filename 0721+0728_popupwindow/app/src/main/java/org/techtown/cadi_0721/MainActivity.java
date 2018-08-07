@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
             // 팝업윈도우 위치, 숫자값을 임의로 준다면 center에서 숫자값만큼 이동
             popupWindow.showAtLocation(layout, Gravity.CENTER, 0,0);
 
-            // 팝업윈도우에 위치한 버튼을 사용할땐 layout.
+            // 팝업윈도우에 위치한 버튼을 사용할땐 뷰.findViewById로 해줌.
             btnPopupClose = (Button) layout.findViewById(R.id.btnPopupClose);
             btnPopupClose.setOnClickListener(disListener);
 
