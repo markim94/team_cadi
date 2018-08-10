@@ -11,13 +11,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.PopupWindow;
 import android.widget.Toast;
 
 
 public class MainActivity extends AppCompatActivity {
 
-    // 팝업창을 닫는 버튼
+    // 팝업창을 닫는 버튼_팝업레이아웃 위치
     private Button btnPopupClose;
 
     // 팝업창을 띄우는 버튼
@@ -25,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
 
     // 팝업 윈도우
     private PopupWindow popupWindow;
+
 
     private int mWidthPixel = 0;
     private int mHeightPixel = 0;
@@ -72,6 +74,8 @@ public class MainActivity extends AppCompatActivity {
             // 팝업윈도우에 위치한 버튼을 사용할땐 뷰.findViewById로 해줌.
             btnPopupClose = (Button) layout.findViewById(R.id.btnPopupClose);
             btnPopupClose.setOnClickListener(disListener);
+
+
 
         }
         catch (Exception e){
