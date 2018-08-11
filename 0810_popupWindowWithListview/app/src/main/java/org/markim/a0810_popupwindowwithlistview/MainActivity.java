@@ -64,7 +64,6 @@ public class MainActivity extends AppCompatActivity {
         // 리스트뷰 객체
         listPopup = (ListView) findViewById(R.id.listPopup);
 
-
         //리스트뷰와 리스트를 연결하기 위해 사용되는 어댑터
         adapter = new ArrayAdapter<>(this,
                 android.R.layout.simple_list_item_1, list);
@@ -77,15 +76,17 @@ public class MainActivity extends AppCompatActivity {
         btnPopupLoad.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                // 팝업윈도우를 띄울 메소드 호출
                 initiatePopupWindow();
             }
         });
     }
 
+    // 팝업윈도우 띄움 메소드
     private void initiatePopupWindow(){
         try{
 
-            // Mainactivity.this 권장
+            // Mainactivity.this 권장, 팝업윈도우는 부분화면을 인플레이터 함.
             LayoutInflater inflater = (LayoutInflater) MainActivity.this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
             // 뷰그룹으로 형변환
